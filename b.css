@@ -1,0 +1,11 @@
+
+.main-img {
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: 2px solid black;
+}

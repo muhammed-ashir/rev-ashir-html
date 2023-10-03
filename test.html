@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.water-drop {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #0074cc; /* Adjust the color as needed */
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: drop 2s linear infinite, ripple 2s linear infinite;
+}
+
+@keyframes drop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <!-- <div class="water-drop"></div> -->
+
+    <script>
+        function getRandomPosition() {
+    const maxWidth = window.innerWidth - 30; // Adjust for the size of your water drop
+    const maxHeight = window.innerHeight - 30; // Adjust for the size of your water drop
+
+    const randomX = Math.random() * maxWidth;
+    const randomY = Math.random() * maxHeight;
+
+    return { x: randomX, y: randomY };
+}
+
+function createRandomDrop() {
+    const waterDrop = document.createElement("div");
+    waterDrop.classList.add("water-drop");
+    const position = getRandomPosition();
+    waterDrop.style.left = `${position.x}px`;
+    waterDrop.style.top = `${position.y}px`;
+
+    document.body.appendChild(waterDrop);
+
+    setTimeout(() => {
+        document.body.removeChild(waterDrop);
+    }, 2000); // Remove the drop after 2 seconds (adjust as needed)
+}
+
+setInterval(createRandomDrop, 6000); // Create a new drop every 8 seconds
+
+    </script>
+</body>
+</html>
