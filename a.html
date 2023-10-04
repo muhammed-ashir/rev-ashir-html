@@ -12,6 +12,37 @@
 </head>
 <body>
     <div class="container">
+        <header>
+            <div class="nav-container">
+              <nav class="navbar">
+                <a routerLink="/" class="nav-branding">
+                  <!-- Ashir -->
+                </a>
+                <ul class="nav-menu" [ngClass]="{'active': isMenuActive }">
+                  <li class="nav-item">
+                    <a routerLink="/dashboard" class="nav-link">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a routerLink="/about" class="nav-link">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a routerLink="/contact" class="nav-link">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a routerLink="/logout" class="nav-link">Logout</a>
+                  </li>
+                </ul>
+                <div class="hamburger" [ngClass]="{'active': isMenuActive }" (click)="toggleMenu()">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+              </nav>
+            </div>
+        </header>
+
+        
+
 
     </div>
 

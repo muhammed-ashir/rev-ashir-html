@@ -12,9 +12,37 @@
 </head>
 <body>
     <div class="container">
+        <header>
+            <div class="nav-container">
+              <nav class="navbar">
+                <a routerLink="/" class="nav-branding">
+                  <!-- Ashir -->
+                </a>
+                <ul class="nav-menu" [ngClass]="{'active': isMenuActive }">
+                  <li class="nav-item">
+                    <a routerLink="/dashboard" class="nav-link">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a routerLink="/about" class="nav-link">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a routerLink="/contact" class="nav-link">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a routerLink="/logout" class="nav-link">Logout</a>
+                  </li>
+                </ul>
+                <div class="hamburger" [ngClass]="{'active': isMenuActive }" (click)="toggleMenu()">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+              </nav>
+            </div>
+        </header>
+        
         <div class="row" style="
         background-color: green;
-            width: 100%;
             height: 400px;
             padding: 0;
             margin: 0;
@@ -22,17 +50,56 @@
             <div class="col-md-6 col-sm-12 img-div" style="
                 background-color: aqua;
                 display: flex;
-                justify-content: center;
+                justify-content: right;
                 align-items: center;
+                padding-right: 3rem;
                 ">
                 <img src="" class="main-img" alt="" srcset="">
             </div>
             <div class="col-md-6 col-sm-12" style="
             background-color: red;
-
+            display: flex;
+              align-items: center;
+              padding-left: 3rem;
             ">
-
+              <div class="row" style="
+              
+              ">
+                <div class="col-12" style="
+                background-color: rgb(87, 25, 211);
+                ">
+gfj
+                </div>
+                <div class="col-12" style="
+                background-color: rgb(211, 167, 25);
+                ">
+gfj
+                </div>
+                <div class="col-12" style="
+                background-color: rgb(87, 211, 25);
+                ">
+gfj
+                </div>
+                <div class="col-12" style="
+                background-color: rgb(25, 198, 211);
+                ">
+gfj
+                </div>
+              </div>
             </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-sm-12" style="
+          background-color: rgb(15, 255, 2);
+          ">
+rsgfh
+          </div>
+          <div class="col-md-6 col-sm-12" style="
+          background-color: rgb(240, 14, 14);
+          ">
+rg
+          </div>
         </div>
     </div>
 
